@@ -50,7 +50,7 @@ namespace Secure_Email_Application.User_Controls
             {
                 new Password().ShowDialog();
 
-                if (!string.IsNullOrWhiteSpace(GlobalVariables.EncryptDecryptPassword))
+                if (!string.IsNullOrEmpty(GlobalVariables.EncryptDecryptPassword))
                 {
                     btnSend.Enabled = false;
                     btnAddAttachment.Enabled = false;
@@ -73,7 +73,7 @@ namespace Secure_Email_Application.User_Controls
             {
                 new Password().ShowDialog();
 
-                if (!string.IsNullOrWhiteSpace(GlobalVariables.EncryptDecryptPassword))
+                if (!string.IsNullOrEmpty(GlobalVariables.EncryptDecryptPassword))
                 {
                     btnSend.Enabled = false;
                     btnAddAttachment.Enabled = false;

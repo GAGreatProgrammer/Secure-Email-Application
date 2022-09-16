@@ -83,7 +83,7 @@ namespace Secure_Email_Application.User_Controls
             {
                 new Password().ShowDialog();
 
-                if (!string.IsNullOrWhiteSpace(GlobalVariables.EncryptDecryptPassword))
+                if (!string.IsNullOrEmpty(GlobalVariables.EncryptDecryptPassword))
                 {
                     GetEmail.GetEmailText(GlobalVariables.InboxEmailFile);
 

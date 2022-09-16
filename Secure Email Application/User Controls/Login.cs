@@ -141,13 +141,13 @@ namespace Secure_Email_Application.User_Controls
         {
             if (GlobalMethods.CheckAccountExists() == true)
             {
-                if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+                if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
                 {
                     MessageBox.Show("Fill all necessary fields!", "Warning",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
                 }
 
-                else if (!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
+                else if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
                 {
                     CheckStatus();
                     LoginMethod();
@@ -167,13 +167,13 @@ namespace Secure_Email_Application.User_Controls
         {
             if (GlobalMethods.CheckAccountExists() == true)
             {
-                if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+                if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
                 {
                     MessageBox.Show("Fill Username and Password field!", "Warning",
                         buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
                 }
 
-                else if (!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
+                else if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
                 {
                     if (Properties.Settings.Default.Username.Equals(txtUsername.Text) &&
                         Properties.Settings.Default.Password.Equals(GlobalMethods.EncryptPassword(txtPassword.Text)))

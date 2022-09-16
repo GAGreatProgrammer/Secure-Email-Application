@@ -34,7 +34,7 @@ namespace Secure_Email_Application.Forms
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtPassword.Text))
+            if (!string.IsNullOrEmpty(txtPassword.Text))
             {
                 GlobalVariables.EncryptDecryptPassword = txtPassword.Text;
                 this.Close();

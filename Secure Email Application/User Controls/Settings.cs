@@ -100,12 +100,12 @@ namespace Secure_Email_Application.User_Controls
         {
             Regex validateEmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
 
-            if (string.IsNullOrWhiteSpace(txtFirstName.Text) || 
-                string.IsNullOrWhiteSpace(txtLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtEmailPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtAppUsername.Text) ||
-                string.IsNullOrWhiteSpace(txtAppPassword.Text))
+            if (string.IsNullOrEmpty(txtFirstName.Text) || 
+                string.IsNullOrEmpty(txtLastName.Text) ||
+                string.IsNullOrEmpty(txtEmail.Text) ||
+                string.IsNullOrEmpty(txtEmailPassword.Text) ||
+                string.IsNullOrEmpty(txtAppUsername.Text) ||
+                string.IsNullOrEmpty(txtAppPassword.Text))
             {
                 sbMessage.Show(MainForm.Instance, "Fill all fields!", BunifuSnackbar.MessageTypes.Warning,
                     duration: 2000, position: BunifuSnackbar.Positions.TopCenter);
